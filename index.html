@@ -36,9 +36,9 @@ body{background-color:hsl(0, 0%, 94%)}
 .desplegable:hover  .contenidoDesplegado{
   display: block;
 }
-li{ text-align:center; width:24%; position: absolute;}
+li{ text-align:center; width:25%; position: absolute;}
 ul{ list-style: none; padding: 10px; }
-.imagen{height:40%; width: 30%; padding-top:30px; padding-left: 35%;}
+.imagen{height:40%; width: 30%; margin-top:30px; margin-left: 650px; border:2px solid DodgerBlue; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);}
 .novedades{margin-top:20px; margin:0 auto; width:200px; text-align:center; border:2px solid DodgerBlue; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);}
 .novedades:hover {
 	background-color: rgba(0 , 0, 255, 0.2);}
@@ -108,7 +108,7 @@ function contador() {
 }
 function siguienteImagen() {
 	imagenActual++;
-	if(imagenActual>3){
+	if(imagenActual>4){
 		imagenActual=1;
 	}
 	document.getElementById("imagen1").src=
