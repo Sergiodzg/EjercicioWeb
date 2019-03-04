@@ -15,7 +15,7 @@ body{background-color:hsl(0, 0%, 94%)}
 	text-align:center;
 	}
 .footer{
-	margin-top:15em;
+	margin-top:5em;
 	width:100%;
 	text-align:center;}
 .desplegable{
@@ -38,7 +38,7 @@ body{background-color:hsl(0, 0%, 94%)}
 }
 li{ text-align:center; width:24%; position: absolute;}
 ul{ list-style: none; padding: 10px; }
-.imagen{height:50%; width: 40%; padding-top:30px; padding-left: 30%;}
+.imagen{height:40%; width: 30%; padding-top:30px; padding-left: 35%;}
 .novedades{margin-top:20px; margin:0 auto; width:200px; text-align:center; border:2px solid DodgerBlue; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);}
 .novedades:hover {
 	background-color: rgba(0 , 0, 255, 0.2);}
@@ -58,33 +58,33 @@ ul{ list-style: none; padding: 10px; }
 	  	<span>Literatura</span>
 	  	<div class="contenidoDesplegado">
 	  	<p>Novela negra</p>
-	  	<p>Novela hist髍ica</p>
-	  	<p>Fantas韆</p>
-	  	<p>Cl醩icos</p>
+	  	<p>Novela hist贸rica</p>
+	  	<p>Fantas铆a</p>
+	  	<p>Cl谩sicos</p>
 	  	</div>
 	  </li>
 	    <li class="desplegable">
-	  	<span>C髆ic</span>
+	  	<span>C贸mic</span>
 	  	<div class="contenidoDesplegado">
 	  	<p>Titulos destacados</p>
 	  	<p>Manga</p>
-	  	<p>C髆ic er髏ico</p>
+	  	<p>C贸mic er贸tico</p>
 	  	</div>
 	  </li>
 	  	  <li class="desplegable">
 	  	<span>Infantil</span>
 	  	<div class="contenidoDesplegado">
-	  	<p>De 0 a 4 a駉s</p>
-	  	<p>De 5 a 9 a駉s</p>
-	  	<p>De 9 a 12 a駉s</p>
+	  	<p>De 0 a 4 a帽os</p>
+	  	<p>De 5 a 9 a帽os</p>
+	  	<p>De 9 a 12 a帽os</p>
 	  	</div>
 	  </li>
 	    <li class="desplegable">
-	  	<span>No ficci髇</span>
+	  	<span>No ficci贸n</span>
 	  	<div class="contenidoDesplegado">
-	  	<p>Biograf韆s</p>
+	  	<p>Biograf铆as</p>
 	  	<p>Libros de texto</p>
-	  	<p>Divulgaci髇</p>
+	  	<p>Divulgaci贸n</p>
 	  	</div>
 	  </li>
 	</ul>
@@ -101,16 +101,11 @@ ul{ list-style: none; padding: 10px; }
 </div>
 
 <script type="text/javascript">
-
 var imagenActual=1;
-
 var deslizador;
-
 function contador() {
 	deslizador = setInterval(siguienteImagen, 3000);
 }
-
-
 function siguienteImagen() {
 	imagenActual++;
 	if(imagenActual>3){
@@ -119,10 +114,9 @@ function siguienteImagen() {
 	document.getElementById("imagen1").src=
 	imagenActual + ".jpg";
 }
-
 contador();
-
 </script>
 
 </body>
 </html>
+
