@@ -2,32 +2,127 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Mi primer proyecto</title>
-</head>
-<body>
+<title>Insert title here</title>
 
-	<div>Bienvenido a la tienda de Sergio</div>
-	<div>listado de novedades:</div>
-	<a href="novedades.html">primera novedad</a><br/>
-	<a href="novedades.html">segunda novedad</a>
-	<br/>
-	<p> texto puesto a parte en un parrafo </p>
-	<h1>texto grade</h1>
-	<h2>tecto menos grande</h2>
-	<h3>texto una menos grande </h3>
-	<table>
-		<tr> <td> primera celda </td> <td> segunda celda </td> </tr>
-		<tr> <td> primera celda segunda fila</td> <td> segunda celda segunda fila</td> </tr>
-	</table>
-	<table> 
-		<tr> <td> nombre: </td> <td> <input type="text" name="campoNombre" /> </td></tr>
-	</table>
-	<div>
-	listado de novedades completo
-	</div>
-	<div>
-	<a href="Novedades.html"> VOLVER</a>
-	</div>
+<style type="text/css">
+body{background-color:hsl(0, 0%, 94%)}
+*{font-family: verdana;
+	}
+.cabecera, .footer{
+	background-color: DodgerBlue;
+	color:white;
+	padding:5px;
+	text-align:center;
+	}
+.footer{
+	margin-top:15em;
+	width:100%;
+	text-align:center;}
+.desplegable{
+	position:relative;
+	float:left;
+	height: 10%;
+	 background-color:grey; color:white; font-size:130%;
+	 padding-top:1%;
+	 }
+.contenidoDesplegado{
+	display:none;
+  	background-color: #f9f9f9;
+  	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  	padding: 12px 16px;
+  	color:black;
+  	position: absolute;
+  	}
+.desplegable:hover  .contenidoDesplegado{
+  display: block;
+}
+li{ text-align:center; width:24%; position: absolute;}
+ul{ list-style: none; padding: 10px; }
+.imagen{height:50%; width: 40%; padding-top:30px; padding-left: 30%;}
+.novedades{margin-top:20px; margin:0 auto; width:200px; text-align:center; border:2px solid DodgerBlue; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);}
+.novedades:hover {
+	background-color: rgba(0 , 0, 255, 0.2);}
+.espacio{height: 40px;}
+</style>
+
+</head>
+
+
+<body>
+<div class="cabecera">
+	<h1>VIVIENDO DEL CUENTO</h1>
+</div>
+<div>
+	<ul>
+	  <li class="desplegable">
+	  	<span>Literatura</span>
+	  	<div class="contenidoDesplegado">
+	  	<p>Novela negra</p>
+	  	<p>Novela histórica</p>
+	  	<p>Fantasía</p>
+	  	<p>Clásicos</p>
+	  	</div>
+	  </li>
+	    <li class="desplegable">
+	  	<span>Cómic</span>
+	  	<div class="contenidoDesplegado">
+	  	<p>Titulos destacados</p>
+	  	<p>Manga</p>
+	  	<p>Cómic erótico</p>
+	  	</div>
+	  </li>
+	  	  <li class="desplegable">
+	  	<span>Infantil</span>
+	  	<div class="contenidoDesplegado">
+	  	<p>De 0 a 4 años</p>
+	  	<p>De 5 a 9 años</p>
+	  	<p>De 9 a 12 años</p>
+	  	</div>
+	  </li>
+	    <li class="desplegable">
+	  	<span>No ficción</span>
+	  	<div class="contenidoDesplegado">
+	  	<p>Biografías</p>
+	  	<p>Libros de texto</p>
+	  	<p>Divulgación</p>
+	  	</div>
+	  </li>
+	</ul>
+</div>
+<div class="espacio"> </div>
+<div class="novedades">
+	<h3>NOVEDADES</h3>
+</div>
+<div >
+	<img  onclick="siguienteImagen()" id="imagen1" class="imagen" src="1.jpg">
+</div>
+	<div class="footer">
+	<p>Todos los derechos reservados.</p>
+</div>
+
+<script type="text/javascript">
+
+var imagenActual=1;
+
+var deslizador;
+
+function contador() {
+	deslizador = setInterval(siguienteImagen, 3000);
+}
+
+
+function siguienteImagen() {
+	imagenActual++;
+	if(imagenActual>3){
+		imagenActual=1;
+	}
+	document.getElementById("imagen1").src=
+	imagenActual + ".jpg";
+}
+
+contador();
+
+</script>
 
 </body>
 </html>
